@@ -19,5 +19,24 @@ public class ArrayMethods {
 		}
 		return sum;
 	}
-	
+	public static int allRowSums(int[][] ary, int x) {
+		int [] result = new int[ary.length];
+		for (int i = 0; i < ary.length; i++) {
+			result[i] = rowSum(ary, i)
+		}
+		return result;
+	}
+	public static int allColSums(int[][] ary, int x) {
+		int boi = 0;
+      	for (int i = 0; i < ary.length; i ++) {
+        	if (ary[x].length > boi) {
+        		boi = ary[i].length;
+        	}
+     	}
+		int [] result = new int[boi];
+		for (int i = 0; i < ary.length) {
+			result[i] = columnSum(ary,i);
+		}
+		return result;
+	}
 }
