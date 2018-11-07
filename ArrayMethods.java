@@ -39,4 +39,36 @@ public class ArrayMethods {
 		}
 		return result;
 	}
+	public static boolean isRowMagic(int[][] ary) {
+		int magicNumber = rowSum(ary,0);
+		boolean magic = true;
+		if (ary.length == 0) {
+			return magic;
+		}
+		for (int i = 0; i < ary.length; i++) {
+			if (rowSum(ary,i) != magicNumber) {
+				magic = false;
+			}
+		}
+		return magic;
+	}
+	public static boolean isColumnMagic(int[][] ary) {
+		int magicNumber = columnSum(ary,0);
+		boolean magic = true;
+		if (ary.length == 0) {
+			return magic;
+		}
+		int boi = 0;
+      	for (int i = 0; i < ary.length; i ++) {
+        	if (ary[x].length > boi) {
+        		boi = ary[i].length;
+        	}
+     	}
+		for (int i = 0; i < boi; i++) {
+			if (columnSum(ary,i) != magicNumber) {
+				magic = false;
+			}
+		}
+		return magic;
+	}
 }
